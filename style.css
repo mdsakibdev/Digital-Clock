@@ -1,0 +1,423 @@
+/* =====================================================
+   GOOGLE FONT
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* =====================================================
+   CSS VARIABLES
+===================================================== */
+
+:root{
+
+    --primary-color:#2563eb;
+    --secondary-color:#1e293b;
+    --background-color:#0f172a;
+    --card-color:rgba(255,255,255,.08);
+    --text-color:#ffffff;
+    --hover-color:#3b82f6;
+
+    --border-radius:18px;
+
+    --transition:.3s ease;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* =====================================================
+   GLOBAL STYLE
+===================================================== */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+
+    color:var(--text-color);
+
+}
+
+
+/* =====================================================
+   REUSABLE CONTAINER
+===================================================== */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+/* =====================================================
+   COMMON IMAGE STYLE
+===================================================== */
+
+img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+
+/* =====================================================
+   COMMON LINK STYLE
+===================================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+/* =====================================================
+   COMMON LIST STYLE
+===================================================== */
+
+ul{
+
+    list-style:none;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header{
+
+    width:100%;
+
+    padding:20px 0;
+
+    backdrop-filter:blur(15px);
+
+    background:rgba(255,255,255,.05);
+
+}
+
+
+/* =====================================================
+   HEADER CONTAINER
+===================================================== */
+
+.header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo h2{
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.nav-list{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+
+.nav-list li a{
+
+    font-size:17px;
+
+    transition:var(--transition);
+
+}
+
+
+.nav-list li a:hover{
+
+    color:var(--hover-color);
+
+}
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero{
+
+    min-height:80vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:60px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.hero-content{
+
+    flex:1;
+
+}
+
+
+.hero-content h1{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+
+.hero-content p{
+
+    font-size:18px;
+
+    color:#cbd5e1;
+
+}
+
+
+/* =====================================================
+   CLOCK CARD
+===================================================== */
+
+.clock-card{
+
+    flex:1;
+
+    min-width:320px;
+
+    padding:40px;
+
+    text-align:center;
+
+    border-radius:var(--border-radius);
+
+    background:var(--card-color);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+    transition:var(--transition);
+
+}
+
+
+/* =====================================================
+   CLOCK CARD HOVER
+===================================================== */
+
+.clock-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+/* =====================================================
+   TIME
+===================================================== */
+
+#time{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+
+/* =====================================================
+   PERIOD
+===================================================== */
+
+#period{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    background:var(--primary-color);
+
+    margin-bottom:20px;
+
+}
+
+
+/* =====================================================
+   DATE
+===================================================== */
+
+#date{
+
+    margin-top:20px;
+
+    font-size:25px;
+
+}
+
+
+/* =====================================================
+   DAY
+===================================================== */
+
+#day{
+
+    margin-top:10px;
+
+    color:#cbd5e1;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+
+    padding:30px 0;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.05);
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:992px){
+
+.hero .container{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.hero-content h1{
+
+font-size:40px;
+
+}
+
+#time{
+
+font-size:45px;
+
+}
+
+}
+
+
+@media(max-width:576px){
+
+.logo h2{
+
+font-size:22px;
+
+}
+
+.nav-list{
+
+gap:15px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero-content h1{
+
+font-size:32px;
+
+}
+
+#time{
+
+font-size:35px;
+
+}
+
+.clock-card{
+
+padding:25px;
+
+}
+
+}
